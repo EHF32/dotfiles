@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum/css'
+let g:netrw_dirhist_0='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum'
+let g:netrw_dirhist_9='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum/apartados'
+let g:netrw_dirhist_8='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum'
+let g:netrw_dirhist_7='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum/docs'
+let g:netrw_dirhist_6='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum'
+let g:netrw_dirhist_5='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum/apartados'
+let g:netrw_dirhist_4='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum/css'
+let g:netrw_dirhist_3='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum'
+let g:netrw_dirhist_2='/run/media/ehf32/2_SMR/SMR2/Aplicaciones Web/BloqueHTML/curriculum/docs'
