@@ -7,7 +7,9 @@ Most referent to qtile and alacrity are from https://github.com/antoniosarosi/do
 ### How to install
 Install dependencies
 ```bash
-pacman -S xorg picom sddm qtile alacritty nvim
+pacman -S xorg picom sddm qtile alacritty nvim nodejs-lts-fermium npm python-pip
+yay -S nerd-fonts-ubuntu-mono
+pip3 install pynvim
 ```
 Download bare repository
 ```bash
