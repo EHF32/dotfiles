@@ -6,8 +6,8 @@ cbatticon -u 5 &
 volumeicon &
 
 #composition
-picom --backend glx &
+#picom --backend glx &
+picom &
 
 #fondo de pantalla
-feh --bg-scale /home/ehf32/Imágenes/fondo.jpg &
-
+feh --bg-scale $HOME/.config/qtile/fondo.jpg &
