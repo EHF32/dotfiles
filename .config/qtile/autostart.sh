@@ -11,3 +11,6 @@ picom &
 
 #fondo de pantalla
 feh --bg-scale $HOME/.config/qtile/fondo.jpg &
+
+#Polkit
+/usr/lib/xfce-polkit/xfce-polkit &

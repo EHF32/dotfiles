@@ -16,7 +16,7 @@ nnoremap <silent> nt :NERDTreeToggle<CR>
 nnoremap <silent> gb :e#<CR>
 
 "tabulaciones
-:set tabstop=4 shiftwidth=4 expandtab
+"set tabstop=4 shiftwidth=4 expandtab
 
 " PLUG
 call plug#begin('~/.vim/plugged')
