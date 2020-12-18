@@ -6,14 +6,23 @@ set scrolloff=5
 
 " portapepels
 vmap <C-c> "+y
-nnoremap <C-H> :tabprev<CR> 
-nnoremap <C-L> :tabnext<CR> 
+nnoremap <C-W>h :tabprev<CR> 
+nnoremap <C-W>l :tabnext<CR> 
 nnoremap <C-G> :w<CR> 
 inoremap <C-G> <C-O>:w<CR>
 " NERDTREE
 nnoremap <silent> nt :NERDTreeToggle<CR>
+let g:NERDTreeQuitOnOpen = 1
 
 nnoremap <silent> gb :e#<CR>
+
+
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
+
+
 
 "tabulaciones
 "set tabstop=4 shiftwidth=4 expandtab
@@ -34,6 +43,11 @@ Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
+Plug 'mxw/vim-jsx'
+
+Plug 'SirVer/ultisnips'
+Plug 'epilande/vim-react-snippets'
+Plug 'epilande/vim-es2015-snippets'
 call plug#end()
 
 
@@ -56,3 +70,4 @@ let g:coc_global_extensions = [
   \ ]
 
 source ~/.config/nvim/coc.vim
+set statusline=%t
