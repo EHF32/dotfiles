@@ -16,5 +16,6 @@
       "trace.server": "verbose",
       "filetypes": ["go"]
     }
-  }
+  },
+  "omnisharp.version": "v1.37.3"
 }

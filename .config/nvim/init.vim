@@ -22,17 +22,20 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
-
+"fold regions zf%
+let b:match_words = '\s*#\s*region.*$:\s*#\s*endregion'
 
 "tabulaciones
-"set tabstop=4 shiftwidth=4 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 
 " PLUG
 call plug#begin('~/.vim/plugged')
 
 "CSHARP
-"Plug 'OmniSharp/omnisharp-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'OmniSharp/omnisharp-vim'
 "Plug 'dense-analysis/ale'
+Plug 'tomasiser/vim-code-dark'
 
 " temas y navegacion
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
@@ -49,6 +52,7 @@ Plug 'SirVer/ultisnips'
 Plug 'epilande/vim-react-snippets'
 Plug 'epilande/vim-es2015-snippets'
 call plug#end()
+let g:UltiSnipsExpandTrigger="<C-l>"
 
 
 
@@ -67,6 +71,9 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
+  \ 'coc-react-refactor', 
+  \ 'coc-phpls', 
+  \ 'coc-omnisharp', 
   \ ]
 
 source ~/.config/nvim/coc.vim

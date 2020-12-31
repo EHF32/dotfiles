@@ -1,5 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$PATH:$HOME/.local/bin"
+
+export FrameworkPathOverride=~/.config/coc/extensions/coc-omnisharp-data/server/omnisharp
+
 export HOWS="/run/media/ehf32/DATOS/shows"
 export RIP="/storage/emulated/0/RipJK/"
 neofetch
