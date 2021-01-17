@@ -14,3 +14,5 @@ feh --bg-scale $HOME/.config/qtile/fondo.jpg &
 
 #Polkit
 /usr/lib/xfce-polkit/xfce-polkit &
+
+gnirehtet-rust-linux64/gnirehtet autorun &

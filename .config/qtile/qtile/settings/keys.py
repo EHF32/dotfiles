@@ -49,7 +49,6 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # ------------ App Configs ------------
 
-
     # Menu
     ([mod], "m", lazy.spawn("rofi -show drun")),
 
@@ -66,14 +65,11 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "Return", lazy.spawn("alacritty")),
 
     # Screenshot
-    ([mod, "shift"], "s", lazy.spawn("flameshot gui")),
+    ([mod], "s", lazy.spawn("spectacle")),
 
     # Lockscreen
     ([mod, "shift"], "p", lazy.spawn("xsecurelock")),
 
-    # Distribution
-    ([mod], "o", lazy.spawn("setxkbmap es")),
-    ([mod], "s", lazy.spawn("setxkbmap -layout us -variant dvp")),
 
     # ------------ Hardware Configs ------------
 

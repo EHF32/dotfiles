@@ -37,6 +37,9 @@ Plug 'OmniSharp/omnisharp-vim'
 "Plug 'dense-analysis/ale'
 Plug 'tomasiser/vim-code-dark'
 
+Plug 'psliwka/vim-smoothie'
+
+
 " temas y navegacion
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
