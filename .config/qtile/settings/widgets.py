@@ -59,14 +59,12 @@ primary_widgets = [
 
     powerline('color4', 'dark'),
 
-    icon(bg="color4", text=' '), # Icon: nf-fa-download
-    
-    widget.Pacman(**base(bg='color4'), update_interval=1800),
+#    icon(bg="color4", text=' '), # Icon: nf-fa-download
+#    widget.Pacman(**base(bg='color4'), update_interval=1800),
 
-    powerline('color3', 'color4'),
+#    powerline('color3', 'color4'),
 
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
-    
     widget.Net(**base(bg='color3'), interface='wlp2s0'),
 
     powerline('color2', 'color3'),

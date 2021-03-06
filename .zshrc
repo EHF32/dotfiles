@@ -1,11 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:/home/ehf32/gyazo-gif-for-linux"
 
 export FrameworkPathOverride=~/.config/coc/extensions/coc-omnisharp-data/server/omnisharp
 
 export HOWS="/run/media/ehf32/DATOS/shows"
+export MANGA="/run/media/ehf32/DATOS/shows/Manga"
 export RIP="/storage/emulated/0/RipJK/"
+export TACH="/storage/emulated/0/Tachiyomi/downloads/InManga (ES)/"
 neofetch
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ehf32/.oh-my-zsh"
@@ -109,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
  alias vi="nvim"
  alias nv="nvim"
 
+ alias aurl="adb shell am start -a android.intent.action.VIEW -d" 
 
 
 
