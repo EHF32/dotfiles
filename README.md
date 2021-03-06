@@ -19,3 +19,11 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 
+
+### Udev
+
+```bash
+sudo curl --create-dirs -L -o /etc/udev/rules.d/51-android.rules https://raw.githubusercontent.com/snowdream/51-android/master/51-android.rules
+sudo chmod a+r /etc/udev/rules.d/51-android.rules
+sudo service udev restart
+```
