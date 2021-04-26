@@ -7,12 +7,14 @@ volumeicon &
 
 #composition
 #picom --backend glx &
-picom &
+picom --backend glx --config picom.conf &
 
 #fondo de pantalla
-feh --bg-scale $HOME/.config/qtile/fondo.jpg &
+#feh --bg-scale $HOME/.config/qtile/fondo.jpg &
 
 #Polkit
 /usr/lib/xfce-polkit/xfce-polkit &
 
-gnirehtet-rust-linux64/gnirehtet autorun &
+gnirehtet autorun &
+
+/home/ehf32/.xinitrc &

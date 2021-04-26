@@ -64,8 +64,23 @@ primary_widgets = [
 
 #    powerline('color3', 'color4'),
 
+      icon(bg="color4", text=' '), # Icon: nf-fa-download
+    widget.CheckUpdates(
+        background=colors['color4'],
+        colour_have_updates=colors['text'],
+        colour_no_updates=colors['text'],
+        no_update_string='0',
+        display_format='{updates}',
+        update_interval=1800,
+        custom_command='checkupdates',
+    ),
+
+    powerline('color3', 'color4'),
+
+
+
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
-    widget.Net(**base(bg='color3'), interface='wlp2s0'),
+    widget.Net(**base(bg='color3'), interface='enp4s0'),
 
     powerline('color2', 'color3'),
 
@@ -95,6 +110,11 @@ secondary_widgets = [
     widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
     widget.CurrentLayout(**base(bg='color1'), padding=5),
+     powerline('color2', 'color1'),
+
+    widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
+
+    powerline('dark', 'color2'),
 ]
 
 widget_defaults = {

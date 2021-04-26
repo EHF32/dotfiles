@@ -9,6 +9,7 @@ from libqtile.command import lazy
 
 
 mod = "mod4"
+alt = "mod1"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
@@ -18,6 +19,15 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "k", lazy.layout.up()),
     ([mod], "h", lazy.layout.left()),
     ([mod], "l", lazy.layout.right()),
+
+    ([mod], "n", lazy.layout.normalize()),
+    ([mod], "o", lazy.layout.maximize()),
+    ([mod, "shift"], "space", lazy.layout.flip()),
+
+
+    #([alt], "Tab", lazy.group.next_window()),
+    ([mod], "x", lazy.group.setlayout("max")),
+    ([mod], "c", lazy.group.setlayout("monadtall")),
 
     # Change window sizes (MonadTall)
     ([mod, "shift"], "l", lazy.layout.grow()),
@@ -51,14 +61,15 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+     ([mod], "m", lazy.spawn("rofi -show drun")),
+    #  ([mod], "m", lazy.spawn("/home/ehf32/.config/rofi/bin/launcher_ribbon")),
 
     # Window Nav
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
 
     # Browser
-    ([mod], "b", lazy.spawn("firefox -p Piedri")),
-    ([mod, "shift"], "b", lazy.spawn("firefox -p angel")),
+    ([mod], "b", lazy.spawn("brave")),
+    ([mod, "shift"], "b", lazy.spawn("firefox-nightly -p angel")),
 
     # File Explorer
     ([mod], "e", lazy.spawn("thunar")),

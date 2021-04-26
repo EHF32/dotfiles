@@ -1,17 +1,20 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="$PATH:$HOME/.local/bin:/home/ehf32/gyazo-gif-for-linux"
+#cat /home/ehf33/.cache/wal/sequences
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$PATH:$HOME/.local/bin"
+export PATH=$HOME/.config/rofi/bin:$PATH
+
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 export FrameworkPathOverride=~/.config/coc/extensions/coc-omnisharp-data/server/omnisharp
 
-export HOWS="/run/media/ehf32/DATOS/shows"
-export MANGA="/run/media/ehf32/DATOS/shows/Manga"
-export RIP="/storage/emulated/0/RipJK/"
-export TACH="/storage/emulated/0/Tachiyomi/downloads/InManga (ES)/"
 neofetch
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ehf32/.oh-my-zsh"
-#ZSH_THEME="robbyrussell"
+export TERM="alacritty"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="intheloop"
+export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*}"'
+
 
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -81,6 +84,7 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+source ~/private.sh
 
 # User configuration
 
@@ -109,10 +113,15 @@ source $ZSH/oh-my-zsh.sh
  alias ohmyzsh="mate ~/.oh-my-zsh"
  alias vim="nvim"
  alias vi="nvim"
+ alias v="nvim"
  alias nv="nvim"
+ alias p="sudo pacman -S "
 
  alias aurl="adb shell am start -a android.intent.action.VIEW -d" 
-
+alias adbvideo="scrcpy"
+alias adbmplayer="adb shell screenrecord --output-format=h264 - | mplayer -framedrop -fps 6000 -cache 5024 -demuxer h264es -"
+ alias pid="xprop _NET_WM_PID"
+ alias ssh="export TERM=xterm-256color && ssh"
 
 
  
@@ -129,8 +138,7 @@ function ranger-cd {
 
 bindkey -s '^O' 'ranger-cd\n'
 
-export TERM=xterm-256color
-alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
-alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
-alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
-alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
+alias mon2cam="node run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
