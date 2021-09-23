@@ -2,7 +2,7 @@
 # https://youtube.com/c/antoniosarosi
 # https://github.com/antoniosarosi/dotfiles
 
-from libqtile import layout
+from libqtile import layout, hook
 from libqtile.config import Match
 from settings.theme import colors
 

@@ -4,13 +4,20 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$HOME/.local/bin"
 export PATH=$HOME/.config/rofi/bin:$PATH
 
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 export FrameworkPathOverride=~/.config/coc/extensions/coc-omnisharp-data/server/omnisharp
 
 neofetch
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ehf32/.oh-my-zsh"
-export TERM="alacritty"
+#export TERM="alacritty"
+export TERM="xterm-kitty"
 ZSH_THEME="robbyrussell"
 #ZSH_THEME="intheloop"
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*}"'
@@ -82,6 +89,8 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins+=(zsh-better-npm-completion)
+
 
 source $ZSH/oh-my-zsh.sh
 source ~/private.sh
@@ -141,4 +150,25 @@ bindkey -s '^O' 'ranger-cd\n'
 alias mon2cam="node run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 
 
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+
+
+
+
+
+
+#! /usr/bin/env bash
+# If you source this file, it will set WTTR_PARAMS as well as show weather.
+
+# WTTR_PARAMS is space-separated URL parameters, many of which are single characters that can be
+# lumped together. For example, "F q m" behaves the same as "Fqm".
+
+wttr() {
+  curl -fGsS -H "Accept-Language: es" "wttr.in/montilla"
+}
+
+eval eval eval 
+BLITZ_AC_ZSH_SETUP_PATH=/home/ehf32/.cache/@blitzjs/cli/autocomplete/zsh_setup && test -f $BLITZ_AC_ZSH_SETUP_PATH && source $BLITZ_AC_ZSH_SETUP_PATH; # blitz autocomplete setup

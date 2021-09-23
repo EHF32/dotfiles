@@ -23,9 +23,11 @@ inoremap <C-G> <C-O>:w<CR>
 inoremap <C-A> <C-O>:.!figlet<CR>
 nnoremap <C-A> :.!figlet<CR>
 
-
-
-
+" Use alt + hjkl to resize windows
+nnoremap <M-j> :resize -2<CR>
+nnoremap <M-k> :resize +2<CR>
+nnoremap <M-h> :vertical resize -2<CR>
+nnoremap <M-l> :vertical resize +2<CR>
 
 " NERDTREE
 nnoremap <silent> nt :NERDTreeToggle<CR>
@@ -52,6 +54,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'bpstahlman/txtfmt'
 Plug 'OmniSharp/omnisharp-vim'
 "Plug 'dense-analysis/ale'
+Plug 'phanviet/vim-monokai-pro'
 
 "Temas
 Plug 'rafi/awesome-vim-colorschemes'
@@ -73,25 +76,30 @@ Plug 'psliwka/vim-smoothie'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Javascript y react
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
+"
 " Plug 'mxw/vim-jsx'
 Plug 'maxmellon/vim-jsx-pretty'
 
+Plug 'pantharshit00/vim-prisma'
 
 Plug 'SirVer/ultisnips'
-Plug 'epilande/vim-react-snippets', {'for': ['javascript', 'javascript.jsx', 'javascriptreact']}
-Plug 'epilande/vim-es2015-snippets'
+Plug 'epilande/vim-react-snippets', {'for': ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescriptreact', 'typescript.tsx']}
+Plug 'epilande/vim-es2015-snippets', {'for': ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescriptreact', 'typescript.tsx']}
 " Otros
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'preservim/nerdcommenter'
+Plug 'vimsence/vimsence'
 call plug#end()
 let g:UltiSnipsExpandTrigger="<C-l>"
+
 
 
 
@@ -128,6 +136,7 @@ let g:coc_global_extensions = [
   \ 'coc-phpls', 
   \ 'coc-omnisharp', 
   \ 'coc-docthis', 
+  \ 'coc-prisma', 
   \ ]
 
 source ~/.config/nvim/coc.vim
@@ -156,10 +165,15 @@ augroup terminal
 au TermOpen * startinsert
 augroup END
 
+
 " map jk to escape
-inoremap jk <Esc>
+"inoremap jk <Esc>
 tnoremap <C-w> <C-\><C-n>
 
+
+
+"Discord vimsence
+let g:vimsence_editing_details = 'Editing a file'
 
 
 

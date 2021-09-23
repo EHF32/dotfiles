@@ -75,7 +75,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "e", lazy.spawn("thunar")),
 
     # Terminal
-    ([mod], "Return", lazy.spawn("alacritty")),
+    ([mod], "Return", lazy.spawn("kitty")),
 
     # Screenshot
     ([mod, "shift"], "s", lazy.spawn("flameshot gui")),

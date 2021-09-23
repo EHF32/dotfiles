@@ -66,6 +66,7 @@ primary_widgets = [
 
       icon(bg="color4", text=' '), # Icon: nf-fa-download
     widget.CheckUpdates(
+        distro="Arch_checkupdates",
         background=colors['color4'],
         colour_have_updates=colors['text'],
         colour_no_updates=colors['text'],
@@ -110,7 +111,7 @@ secondary_widgets = [
     widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
     widget.CurrentLayout(**base(bg='color1'), padding=5),
-     powerline('color2', 'color1'),
+    powerline('color2', 'color1'),
 
     widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
 
