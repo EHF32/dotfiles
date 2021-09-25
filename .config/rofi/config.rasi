@@ -1,0 +1,36 @@
+configuration {
+	modi: "window,run,ssh";
+	width: 18;
+	lines: 12;
+	columns: 2;
+	font: "UbuntuMono Nerd Font 14";
+	bw: 5;
+	location: 0;
+	padding: 5;
+	yoffset: 0;
+	xoffset: 0;
+	fixed-num-lines: true;
+	show-icons: true;
+	terminal: "rofi-sensible-terminal";
+	ssh-client: "ssh";
+	ssh-command: "{terminal} -e {ssh-client} {host}";
+	run-command: "{cmd}";
+	parse-hosts: true;
+	matching: "normal";
+	separator-style: "none";
+	scrollbar-width: 1;
+	theme: "theme.rasi";
+	color-normal: "#0a0a0f, #d6cdd8, #0a0a0f, #78666e, #d6cdd8";
+	color-urgent: "#0a0a0f, #d6b48d, #22231D, #d6b48d, #d6cdd8";
+	color-active: "#0a0a0f, #9F8FA5, #0a0a0f, #9F8FA5, #0a0a0f";
+	color-window: "#0a0a0f, #78666e, #53464b";
+	display-window: "";
+	display-run: "";
+	display-ssh: "  ";
+	display-drun: "";
+	display-combi: "";
+	kb-mode-next: "Shift+Right,Control+Tab,Alt+l";
+	kb-mode-previous: "Shift+Left,Control+Shift+Tab,Alt+h";
+	kb-row-up: "Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k";
+	kb-row-down: "Down,Control+n,Alt+j";
+}

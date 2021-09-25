@@ -7,7 +7,8 @@ volumeicon &
 
 #composition
 #picom --backend glx &
-picom --backend glx --config picom.conf &
+picom --blur-method dual_kawase --blur-strength 7 --backend glx --corner-radius 15
+
 
 #fondo de pantalla
 #feh --bg-scale $HOME/.config/qtile/fondo.jpg &

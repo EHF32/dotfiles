@@ -97,6 +97,9 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'preservim/nerdcommenter'
 Plug 'vimsence/vimsence'
+
+Plug 'xuhdev/vim-latex-live-preview', {'for': 'tex'}
+Plug 'lervag/vimtex'
 call plug#end()
 let g:UltiSnipsExpandTrigger="<C-l>"
 
