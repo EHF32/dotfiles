@@ -1,14 +1,15 @@
 #!/bin/sh
 
+setxkbmap -option caps:escape &
 # systray battery icon
 cbatticon -u 5 &
 # systray volume
 volumeicon &
 
 #composition
-#picom --backend glx &
-picom --blur-method dual_kawase --blur-strength 7 --backend glx --corner-radius 15
-
+picom --config picom.conf &
+#picom --backend glx --vsync &
+#picom --blur-method dual_kawase --blur-strength 7 --backend glx --corner-radius 15 --config picom.conf &
 
 #fondo de pantalla
 #feh --bg-scale $HOME/.config/qtile/fondo.jpg &
@@ -16,6 +17,7 @@ picom --blur-method dual_kawase --blur-strength 7 --backend glx --corner-radius 
 #Polkit
 /usr/lib/xfce-polkit/xfce-polkit &
 
-gnirehtet autorun &
+#gnirehtet autorun &
 
 /home/ehf32/.xinitrc &
+

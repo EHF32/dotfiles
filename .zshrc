@@ -10,6 +10,8 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export CHROME_EXECUTABLE="/usr/bin/brave"
+
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 export FrameworkPathOverride=~/.config/coc/extensions/coc-omnisharp-data/server/omnisharp
 
@@ -127,12 +129,22 @@ source ~/private.sh
  alias p="sudo pacman -S "
 
  alias aurl="adb shell am start -a android.intent.action.VIEW -d" 
-alias adbvideo="scrcpy"
-alias adbmplayer="adb shell screenrecord --output-format=h264 - | mplayer -framedrop -fps 6000 -cache 5024 -demuxer h264es -"
+ alias adbvideo="scrcpy"
+ alias adbmplayer="adb shell screenrecord --output-format=h264 - | mplayer -framedrop -fps 6000 -cache 5024 -demuxer h264es -"
  alias pid="xprop _NET_WM_PID"
  alias ssh="export TERM=xterm-256color && ssh"
+ alias obsmesa="export LD_PRELOAD=/usr/lib/libEGL.so obs&&obs"
 
 
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'
+alias cat='bat'
+alias catn='bat'
+alias x="systemctl suspend & xsecurelock && exit"
+alias s="shutdown now"
  
 function ranger-cd {
     tempfile="$(mktemp -t tmp.XXXXXX)"
@@ -148,14 +160,17 @@ function ranger-cd {
 bindkey -s '^O' 'ranger-cd\n'
 
 alias mon2cam="node run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
+alias revivir="pkill -f 'brave \-\-type=gpu-process'"
 
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias templatex="cp ~/prog/templatex/template -R ."
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 
-
+alias killport="fuser -k -n tcp 3000"
 
 
 
@@ -172,3 +187,7 @@ wttr() {
 
 eval eval eval 
 BLITZ_AC_ZSH_SETUP_PATH=/home/ehf32/.cache/@blitzjs/cli/autocomplete/zsh_setup && test -f $BLITZ_AC_ZSH_SETUP_PATH && source $BLITZ_AC_ZSH_SETUP_PATH; # blitz autocomplete setup
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+alias qemu="qemu-system-x86_64"

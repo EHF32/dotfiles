@@ -12,7 +12,13 @@ from settings.theme import colors
 layout_conf = {
     'border_focus': colors['focus'][0],
     'border_width': 1,
-    'margin': 10 ,
+    'margin': 15 ,
+}
+
+layout_conff = {
+    'border_focus': colors['focus'][0],
+    'border_width': 1,
+    'margin': 40 ,
 }
 
 layouts = [
@@ -22,6 +28,7 @@ layouts = [
     layout.Bsp(**layout_conf),
     layout.Matrix(columns=2, **layout_conf),
     layout.RatioTile(**layout_conf),
+    layout.MonadTall(**layout_conff),
     # layout.Columns(),
     # layout.Tile(),
     # layout.TreeTab(),

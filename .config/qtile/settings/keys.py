@@ -10,6 +10,7 @@ from libqtile.command import lazy
 
 mod = "mod4"
 alt = "mod1"
+space = "space"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
@@ -59,16 +60,18 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # ------------ App Configs ------------
 
+    # Close notifications
+    (["control"], "space", lazy.spawn("dunstctl close")),
 
     # Menu
-     ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "m", lazy.spawn("rofi -show drun")),
     #  ([mod], "m", lazy.spawn("/home/ehf32/.config/rofi/bin/launcher_ribbon")),
 
     # Window Nav
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
 
     # Browser
-    ([mod], "b", lazy.spawn("brave")),
+    ([mod], "b", lazy.spawn("brave --disable-gpu-vsync")),
     ([mod, "shift"], "b", lazy.spawn("firefox-nightly -p angel")),
 
     # File Explorer

@@ -21,7 +21,7 @@ powerline = lambda fg="light", bg="dark": widget.TextBox(
    **base(fg, bg),
     text="", # Icon: nf-oct-triangle_left
     fontsize=37,
-    padding=-2
+    padding=-3
 )
 
 workspaces = lambda: [
@@ -81,7 +81,7 @@ primary_widgets = [
 
 
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
-    widget.Net(**base(bg='color3'), interface='enp4s0'),
+    widget.Net(**base(bg='color3'), interface='enp34s0'),
 
     powerline('color2', 'color3'),
 
@@ -90,6 +90,7 @@ primary_widgets = [
     widget.CurrentLayout(**base(bg='color2'), padding=5),
 
     powerline('color1', 'color2'),
+
 
     icon(bg="color1", fontsize=17, text=' '), # Icon: nf-mdi-calendar_clock
 
@@ -111,6 +112,7 @@ secondary_widgets = [
     widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
     widget.CurrentLayout(**base(bg='color1'), padding=5),
+
     powerline('color2', 'color1'),
 
     widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),

@@ -19,7 +19,6 @@ configuration {
 	matching: "normal";
 	separator-style: "none";
 	scrollbar-width: 1;
-	theme: "theme.rasi";
 	color-normal: "#0a0a0f, #d6cdd8, #0a0a0f, #78666e, #d6cdd8";
 	color-urgent: "#0a0a0f, #d6b48d, #22231D, #d6b48d, #d6cdd8";
 	color-active: "#0a0a0f, #9F8FA5, #0a0a0f, #9F8FA5, #0a0a0f";
@@ -34,3 +33,4 @@ configuration {
 	kb-row-up: "Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k";
 	kb-row-down: "Down,Control+n,Alt+j";
 }
+@theme "theme.rasi"

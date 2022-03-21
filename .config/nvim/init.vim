@@ -1,8 +1,7 @@
 " fzf
 " vim-fugitive
 
-set rnu
-set number
+set rnu number
 set cursorline&
 set termguicolors&
 set encoding=utf-8
@@ -11,6 +10,7 @@ set scrolloff=5
 set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=99
+set nofoldenable
 
 " portapepels
 vmap <C-c> "+y
@@ -100,8 +100,12 @@ Plug 'vimsence/vimsence'
 
 Plug 'xuhdev/vim-latex-live-preview', {'for': 'tex'}
 Plug 'lervag/vimtex'
+Plug 'engeljh/vim-latexfmt'
+
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 let g:UltiSnipsExpandTrigger="<C-l>"
+let g:livepreview_previewer = 'zathura'
 
 
 
@@ -147,6 +151,7 @@ set statusline=%t
 
 
 
+nmap K <Plug>latexfmt_format
 
 
 " FZF
@@ -155,7 +160,7 @@ nnoremap -ec :Files components<CR>
 nnoremap -ep :Files pages<CR>
 nnoremap -. :Files<CR>
 
-
+ 
 set rtp+=/usr/local/opt/fzf
 let g:fzf_action = {
     \ 'ctrl-t': 'tab split',
@@ -179,6 +184,7 @@ tnoremap <C-w> <C-\><C-n>
 let g:vimsence_editing_details = 'Editing a file'
 
 
+let g:livepreview_use_biber = 1
 
 
 

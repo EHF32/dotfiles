@@ -8,7 +8,8 @@
     "javascriptreact",
     "typescript.tsx",
     "graphql",
-    "prisma"
+    "prisma",
+    "html"
   ],
   "languageserver": {
     "go": {
@@ -20,5 +21,6 @@
   },
   "codeLens.enable": true,
   "omnisharp.version": "v1.37.3",
-  "prisma.prismaFmtBinPath": ""
+  "prisma.prismaFmtBinPath": "",
+  "tsserver.maxTsServerMemory": 9072
 }
