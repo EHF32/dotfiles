@@ -103,7 +103,24 @@ Plug 'lervag/vimtex'
 Plug 'engeljh/vim-latexfmt'
 
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'folke/zen-mode.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
+
+Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+
+
+
+
 call plug#end()
+
+" In your init.lua or init.vim
+set termguicolors
+
+let g:tokyonight_style = "night"
+
+
 let g:UltiSnipsExpandTrigger="<C-l>"
 let g:livepreview_previewer = 'zathura'
 
@@ -128,9 +145,15 @@ let g:airline_right_alt_sep = ''
 "let g:airline_symbols.linenr = ''
 let g:airline_powerline_fonts = 1
 
+
+
+
 "colorscheme ayu
-colorscheme material 
-set termguicolors&
+"colorscheme material 
+colorscheme tokyonight
+
+
+"set termguicolors&
 "coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -185,7 +208,6 @@ let g:vimsence_editing_details = 'Editing a file'
 
 
 let g:livepreview_use_biber = 1
-
 
 
 "set ft=txtfmt

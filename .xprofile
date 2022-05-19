@@ -1,2 +1,3 @@
 # Distribucion de teclado
 setxkbmap es &
+xrandr --dpi 96 &

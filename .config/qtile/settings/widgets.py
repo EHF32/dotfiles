@@ -1,7 +1,27 @@
+import subprocess
 from libqtile import widget
 from settings.theme import colors
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
+
+class CloudFlight(widget.TextBox):
+    def __init__(self, **config):
+        widget.TextBox.__init__(self, **config)
+        self.add_callbacks(
+            {
+                "Button1": self.left_click
+            }
+        )
+
+    def left_click(self):
+        huevo = subprocess.check_output('timeout 0.1 cloud-flight; exit 0', shell=True, text=True)
+        status = huevo.split('Battery ')[1]
+        self.update(str(status))
+        if "charging" in status:
+            self.update(text=' ')
+        else:
+            self.update(text=str(status) + "% ")
+
 
 base = lambda fg='text', bg='dark': {
     'foreground': colors[fg],
@@ -79,7 +99,6 @@ primary_widgets = [
     powerline('color3', 'color4'),
 
 
-
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     widget.Net(**base(bg='color3'), interface='enp34s0'),
 
@@ -98,9 +117,15 @@ primary_widgets = [
 
     powerline('dark', 'color1'),
 
+
+
     widget.Systray(background=colors['dark'], padding=5),
+    powerline('color1', 'dark'),
+
+    CloudFlight(**base(bg='color1'),text="C "),
 
 ]
+
 
 secondary_widgets = [
     *workspaces(),
@@ -126,3 +151,6 @@ widget_defaults = {
     'padding': 1,
 }
 extension_defaults = widget_defaults.copy()
+
+
+

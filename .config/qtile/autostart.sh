@@ -21,3 +21,5 @@ picom --config picom.conf &
 
 /home/ehf32/.xinitrc &
 
+
+qtile cmd-obj -o widget cloudflight -f update -a C &
