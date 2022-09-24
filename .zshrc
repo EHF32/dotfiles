@@ -185,9 +185,19 @@ wttr() {
   curl -fGsS -H "Accept-Language: es" "wttr.in/montilla"
 }
 
+sqldeveloepr() {
+  export DEFAULT_JAVA=java-8-openjdk       
+  export JAVA_HOME=$(echo /usr/lib/jvm/$DEFAULT_JAVA)
+  nohup /usr/bin/oracle-sqldeveloper
+}
+
 eval eval eval 
 BLITZ_AC_ZSH_SETUP_PATH=/home/ehf32/.cache/@blitzjs/cli/autocomplete/zsh_setup && test -f $BLITZ_AC_ZSH_SETUP_PATH && source $BLITZ_AC_ZSH_SETUP_PATH; # blitz autocomplete setup
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 alias qemu="qemu-system-x86_64"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

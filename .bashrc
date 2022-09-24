@@ -49,3 +49,4 @@ fi
 export PATH="$PATH:$HOME/.local/bin"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias php74=/opt/alt/php-fpm74/usr/bin/php 

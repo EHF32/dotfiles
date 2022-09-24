@@ -109,6 +109,7 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+Plug 'wakatime/vim-wakatime'
 
 
 
@@ -174,7 +175,7 @@ set statusline=%t
 
 
 
-nmap K <Plug>latexfmt_format
+"nmap K <Plug>latexfmt_format
 
 
 " FZF
